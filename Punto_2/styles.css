@@ -1,46 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-.image-container {
-    position: relative;
+    height: 100%;
     width: 100%;
-    max-height: 900px;
     overflow: hidden;
 }
 
-.image-container img {
+#container {
+    position: relative;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100vh;
+    display: flex; /* Usar flexbox para dividir en dos partes */
 }
 
-.text-overlay {
+#map1, #map2 {
+    width: 50%; /* Cada mapa ocupará el 50% del ancho */
+    height: 100%;
+    position: relative;
+}
+
+#slider {
     position: absolute;
-    top: 50%;
+    top: 0;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.text-overlay h1 {
-    font-size: 50px;
-    margin: 0;
-    font-weight: bold;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-}
-
-.text-overlay h3 {
-    font-size: 26px;
-    margin: 5px 0;
-    font-weight: normal;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    width: 5px;
+    background: #fff;
+    cursor: ew-resize;
+    z-index: 20;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
