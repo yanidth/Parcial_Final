@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa de La Alborada</title>
+    <title>Mapa de Localidad</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-side-by-side/leaflet-side-by-side.js"></script>
 </head>
 <body>
 
+    <div id="buttons">
+        <button id="ndvi">Mostrar NDVI</button>
+        <button id="savi">Mostrar SAVI</button>
+        <button id="transmilenio">Mostrar Paraderos</button>
+    </div>
+
     <div id="map"></div>
 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/turf/turf.min.js"></script> <!-- Librería Turf.js -->
     <script src="script.js"></script>
 
 </body>
 </html>
+
